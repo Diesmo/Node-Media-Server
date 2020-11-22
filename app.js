@@ -22,13 +22,23 @@ const config = {
     allow_origin: '*',
     api: true
   },
-  https: {
-    port: 8443,
-    key: './privatekey.pem',
-    cert: './certificate.pem',
+  trans: {
+    ffmpeg: '/usr/bin/ffmpeg',
+    tasks: [
+      {
+        app: 'live',
+        mp4: true,
+        mp4Flags: '[movflags=frag_keyframe+empty_moov]',
+      }
+    ]
   },
+//   https: {
+//     port: 8443,
+//     key: './privatekey.pem',
+//     cert: './certificate.pem',
+//   },
   auth: {
-    api: true,
+    api: false,
     api_user: 'admin',
     api_pass: 'admin',
     play: false,
