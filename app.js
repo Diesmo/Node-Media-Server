@@ -82,7 +82,7 @@ const config = {
         ]
       },
     ]
-  }
+  },
 //   https: {
 //     port: 8443,
 //     key: './privatekey.pem',
